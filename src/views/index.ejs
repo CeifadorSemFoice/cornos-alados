@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="./icon.svg" />
+    <title>Cornos Alados</title>
+    <style>
+        body {
+            font-family: Robot, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        th, tr, td {
+            padding: 5px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #555;
+            color: #ffd;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <% for (let key in data)  { %>
+            <tr>
+                <th>
+                    <%= key === 'query' ? 'ip' : key %>
+                </th>
+                <td>
+                    <%= data[key] %>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+
+    <script>
+        (function() {
+            console.log('Vaza daqui seu engenheiro aeroespacial')
+        })();
+    </script>
+</body>
+</html>
